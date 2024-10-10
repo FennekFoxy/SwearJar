@@ -9,15 +9,11 @@ This is a simple plugin for spigot that adds a SwearJar to minecraft.
 
 <h2 align='left'> Commands</h2>
  <h3 align='left'> Filter</h3>
-  ###
-   Allows adding, removing, and viewing words to the plugin in game
-   ###
-   /swearjar filter add (word)
-   ###
-   /swearjar filter remove (word)
-   ###
-   /swearjar filter list
-   
+<p align="left">Allows adding, removing, and viewing words to the plugin in game</p>
+<p align="left">/swearjar filter add (word)</p>
+<p align="left">/swearjar filter remove (word)</p>   
+<p align="left">/swearjar filter list</p>
+
 <h2 align='left'>Cost</h2>
    Allows changing the punishment cost in game 
 ###
