@@ -8,7 +8,7 @@ SwearJar.Bypass  -  Bypass the filter completely
 ###
 
 <h2 align='left'> Commands</h2>
-  Filter
+ <h3 align='left'> Filter</h3>
   ###
    Allows adding, removing, and viewing words to the plugin in game
    ###
