@@ -160,7 +160,7 @@ public class SwearJar extends JavaPlugin implements Listener {
 
         } else if (args[0].equalsIgnoreCase("cost")) {
             if (args.length < 2) {
-                sender.sendMessage("Usage: /swearjar cost <value>");
+                sender.sendMessage("The current fine cost is $" + fineAmount);
                 return true;
             }
             try {
