@@ -120,11 +120,58 @@ public class SwearJar extends JavaPlugin implements Listener {
         }
 
         if (args[0].equalsIgnoreCase("filter")) {
-            // Existing filter logic...
+            if (args.length == 1 || args[1].equalsIgnoreCase("list")) {
+                if (swearWords.isEmpty()) {
+                    sender.sendMessage("There are no words in the filter.");
+                } else {
+                    sender.sendMessage("Filtered words: " + String.join(", ", swearWords));
+                }
+                return true;
+            }
+
+            if (args.length < 3) {
+                sender.sendMessage("Usage: /swearjar filter [add:remove] <word>");
+                return true;
+            }
+            String action = args[1].toLowerCase();
+            String word = args[2].toLowerCase();
+
+            if (action.equals("add")) {
+                if (swearWords.contains(word)) {
+                    sender.sendMessage("Word is already in the filter.");
+                } else {
+                    swearWords.add(word);
+                    getConfig().set("words", swearWords);
+                    saveConfig();
+                    sender.sendMessage("Added '" + word + "' to the filter.");
+                }
+            } else if (action.equals("remove")) {
+                if (!swearWords.contains(word)) {
+                    sender.sendMessage("Word is not in the filter.");
+                } else {
+                    swearWords.remove(word);
+                    getConfig().set("words", swearWords);
+                    saveConfig();
+                    sender.sendMessage("Removed '" + word + "' from the filter.");
+                }
+            } else {
+                sender.sendMessage("Invalid action! Use 'add', 'remove', or 'list'.");
+            }
 
         } else if (args[0].equalsIgnoreCase("cost")) {
-            // Existing cost logic...
-
+            if (args.length < 2) {
+                sender.sendMessage("Usage: /swearjar cost <value>");
+                return true;
+            }
+            try {
+                double newCost = Double.parseDouble(args[1]);
+                fineAmount = newCost;
+                getConfig().set("amount", fineAmount);
+                saveConfig();
+                sender.sendMessage("Swear fine cost updated to $" + fineAmount);
+            } catch (NumberFormatException e) {
+                sender.sendMessage("Invalid cost value. Please enter a valid number.");
+            }
         } else if (args[0].equalsIgnoreCase("fines")) {
             if (args.length < 2) {
                 sender.sendMessage("Usage: /swearjar fines [show:empty:toggle]");
