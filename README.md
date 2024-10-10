@@ -1,9 +1,8 @@
 This is a simple plugin for spigot that adds a SwearJar to minecraft.
 
 <h2 align='left'> Permissions</h2>
-###
 <p align="left">SwearJar.Admin  -  Access to modify the plugin</p>
-###
+
 <p align="left">SwearJar.Bypass  -  Bypass the filter completely</p>
 
 ###
