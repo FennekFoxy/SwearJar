@@ -5,3 +5,4 @@ words:
   - cunt
 #Amount of money deducted for each word
 amount: 10000.0
+total_fines_collected_enabled: true
