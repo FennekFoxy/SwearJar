@@ -5,7 +5,6 @@ This is a simple plugin for spigot that adds a SwearJar to minecraft.
 
 <p align="left">SwearJar.Bypass  -  Bypass the filter completely</p>
 
-###
 
 <h2 align='left'> Commands</h2>
  <h3 align='left'> Filter</h3>
@@ -15,16 +14,12 @@ This is a simple plugin for spigot that adds a SwearJar to minecraft.
 <p align="left">/swearjar filter list</p>
 
 <h2 align='left'>Cost</h2>
-   Allows changing the punishment cost in game 
-###
-   /swearjar cost (number)
-   
-<h2 align='left'> Fines</h2>
-   If enabled shows total fines collected
-    /swearjar fines toggle
-    /swearjar fines show
-    /swearjar fines empty
-  
-<h1 align="left">Hey 👋 What's up?</h1>
+<p align="left">Allows changing the punishment cost in game </p>
+<p align="left">/swearjar cost (number)</p>
 
-###
+<h2 align='left'> Fines</h2>
+<p align="left">If enabled shows total fines collected</p>
+<p align="left">/swearjar fines toggle</p>
+<p align="left">/swearjar fines show</p>
+<p align="left">/swearjar fines empty</p>
+   
