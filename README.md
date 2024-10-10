@@ -5,7 +5,8 @@ Permissions:
 SwearJar.Admin  -  Access to modify the plugin
 ###
 SwearJar.Bypass  -  Bypass the filter completely
-
+###
+###
 
 Commands:
 ###
