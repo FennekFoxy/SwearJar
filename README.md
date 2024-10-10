@@ -1,15 +1,13 @@
 This is a simple plugin for spigot that adds a SwearJar to minecraft.
 
 <h2 align='left'> Permissions</h2>
-###
 SwearJar.Admin  -  Access to modify the plugin
 ###
 SwearJar.Bypass  -  Bypass the filter completely
 ###
 ###
 
-Commands:
-###
+<h2 align='left'> Commands</h2>
   Filter
   ###
    Allows adding, removing, and viewing words to the plugin in game
@@ -20,13 +18,12 @@ Commands:
    ###
    /swearjar filter list
    
-  Cost
-  ###
+<h2 align='left'>Cost</h2>
    Allows changing the punishment cost in game 
 ###
    /swearjar cost (number)
    
-  Fine
+<h2 align='left'> Fines</h2>
    If enabled shows total fines collected
     /swearjar fines toggle
     /swearjar fines show
