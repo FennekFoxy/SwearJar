@@ -1,0 +1,7 @@
+#List of words to filter
+words:
+  - ass
+  - bitch
+  - cunt
+#Amount of money deducted for each word
+amount: 10000.0
