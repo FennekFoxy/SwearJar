@@ -11,13 +11,19 @@ SwearJar.Bypass  -  Bypass the filter completely
 Commands:
 ###
   Filter
+  ###
    Allows adding, removing, and viewing words to the plugin in game
+   ###
    /swearjar filter add (word)
+   ###
    /swearjar filter remove (word)
+   ###
    /swearjar filter list
    
   Cost
-   Allowes changing the punishment cost in game 
+  ###
+   Allows changing the punishment cost in game 
+###
    /swearjar cost (number)
    
   Fine
