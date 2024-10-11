@@ -27,4 +27,5 @@ This is a simple plugin for spigot that adds a SwearJar to minecraft.
 <h3 align='left'> Logs</h3>
 <p align="left">If enabled allows the message logs to be cleared in game</p>
 <p align="left">/swearjar log clear</p>
+<p align="left">/swearjar log toggle</p>
    
