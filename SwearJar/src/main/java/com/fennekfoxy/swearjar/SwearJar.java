@@ -12,6 +12,10 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 public class SwearJar extends JavaPlugin implements Listener {
@@ -102,8 +106,23 @@ public class SwearJar extends JavaPlugin implements Listener {
                 if (getConfig().getBoolean("total_fines_collected_enabled")) {
                     totalFinesCollected += amountTaken;
                 }
+
+                // Log the player's message if logging is enabled
+                if (getConfig().getBoolean("log_messages_enabled")) {
+                    logMessage(player.getName(), event.getMessage());
+                }
                 break;
             }
+        }
+    }
+
+    // Method to log the message to a file
+    private void logMessage(String playerName, String message) {
+        File logFile = new File(getDataFolder(), "messages.log");
+        try (FileWriter writer = new FileWriter(logFile, true)) {
+            writer.write(playerName + " - " + message + " (" + new Date() + ")\n");
+        } catch (IOException e) {
+            getLogger().severe("Could not write to messages.log: " + e.getMessage());
         }
     }
 
@@ -172,6 +191,17 @@ public class SwearJar extends JavaPlugin implements Listener {
             } catch (NumberFormatException e) {
                 sender.sendMessage("Invalid cost value. Please enter a valid number.");
             }
+        } else if (args[0].equalsIgnoreCase("log")) {
+            if (args.length < 2) {
+                sender.sendMessage("Usage: /swearjar log [clear]");
+                return true;
+            }
+
+            if (args[1].equalsIgnoreCase("clear")) {
+                clearLogFile(sender);
+            } else {
+                sender.sendMessage("Unknown subcommand. Use: /swearjar log [clear]");
+            }
         } else if (args[0].equalsIgnoreCase("fines")) {
             if (args.length < 2) {
                 sender.sendMessage("Usage: /swearjar fines [show:empty:toggle]");
@@ -203,5 +233,18 @@ public class SwearJar extends JavaPlugin implements Listener {
         }
 
         return true;
+    }
+    // Method to clear the log file
+    private void clearLogFile(CommandSender sender) {
+        File logFile = new File(getDataFolder(), "messages.log");
+        if (logFile.exists()) {
+            if (logFile.delete()) {
+                sender.sendMessage("The log file has been cleared.");
+            } else {
+                sender.sendMessage("Failed to clear the log file.");
+            }
+        } else {
+            sender.sendMessage("There is no log file to clear.");
+        }
     }
 }
