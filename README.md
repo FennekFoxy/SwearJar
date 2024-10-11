@@ -19,7 +19,7 @@ This is a simple plugin for spigot that adds a SwearJar to minecraft.
 <p align="left">/swearjar cost (number)</p>
 
 <h3 align='left'> Fines</h3>
-<p align="left">If enabled shows total fines collectedor empties the jar</p>
+<p align="left">If enabled shows total fines collected or empties the jar</p>
 <p align="left">/swearjar fines toggle</p>
 <p align="left">/swearjar fines show</p>
 <p align="left">/swearjar fines empty</p>
