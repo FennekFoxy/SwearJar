@@ -1,0 +1,56 @@
+words:
+  - anal
+  - anus
+  - arse
+  - ass
+  - bastard
+  - bitch
+  - biatch
+  - blowjob
+  - blow job
+  - boner
+  - clitoris
+  - cock
+  - coon
+  - crap
+  - cunt
+  - dick
+  - dildo
+  - dyke
+  - fellate
+  - fellatio
+  - fuck
+  - f u c k
+  - homo
+  - jerk
+  - jizz
+  - knobend
+  - knob end
+  - labia
+  - muff
+  - nigger
+  - nigga
+  - penis
+  - prick
+  - pube
+  - pussy
+  - queer
+  - scrotum
+  - sex
+  - shit
+  - s hit
+  - sh1t
+  - slut
+  - smegma
+  - spunk
+  - tit
+  - tosser
+  - turd
+  - twat
+  - vagina
+  - wank
+  - whore
+#Amount of money deducted for each word
+amount: 100.0
+total_fines_collected_enabled: true
+log_messages_enabled: true

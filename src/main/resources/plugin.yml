@@ -1,0 +1,19 @@
+name: SwearJar
+version: 1.0
+main: com.Fennek.swearJar.SwearJar
+api-version: 1.6
+author: FennekFoxy
+softdepend:
+  - Vault
+commands:
+  swearjar:
+    description: Manages the SwearJar filter and settings.
+    usage: /swearjar filter [add:remove:list] <word> | /swearjar cost <value>
+    aliases: sj
+permissions:
+  swearjar.admin:
+    description: Allows management of the SwearJar plugin.
+    default: op
+  swearjar.bypass:
+    description: Allows a player to bypass the swear filter
+    default: op
